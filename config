@@ -1,0 +1,4 @@
+#!/bin/bash
+
+I3CONFIG=$HOME/.i3/config
+SCREENSHOTS=$HOME/Pictures

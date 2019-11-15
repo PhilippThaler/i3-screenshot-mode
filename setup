@@ -12,5 +12,11 @@ if ! command -v maim >/dev/null 2>&1 &&
   exit 1
 fi
 
-echo -e "Downloading the i3-mode from GitHub"
-curl -s 
+echo -e "Setting environment variables\n"
+curl -s https://raw.githubusercontent.com/PhilippThaler/i3-screenshot-mode/master/config
+
+echo -e "Downloading the i3-mode from GitHub\n"
+echo $I3CONFIG
+
+echo -e "\n\n\n" >> $I3CONFIG
+curl -s https://raw.githubusercontent.com/PhilippThaler/i3-screenshot-mode/master/screenshot-mode >> $I3CONFIG
