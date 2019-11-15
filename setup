@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if ! command -v maim >/dev/null 2>&1 && 
+   ! command -v xclip >/dev/null 2>&1 &&
+   ! command -v xdotool >/dev/null 2>&1; then
+  echo "Dependencies not installed"
+  echo "Make sure that the following programs are installed:"
+  echo "- maim"
+  echo "- xclip"
+  echo "- xdotool"
+
+  exit 1
+fi
+
+echo -e "Downloading the i3-mode from GitHub"
+curl -s 

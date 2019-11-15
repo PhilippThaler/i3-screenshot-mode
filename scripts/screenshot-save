@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ -z "$SCREENSHOTS" ]
+then
+  SCREENSHOTS=~/Pictures
+fi
+  
+xclip -selection clipboard -t image/png -o > $SCREENSHOTS/$(date +%s).png
